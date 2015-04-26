@@ -8,18 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('proyectofinalApp', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'ngMaterial'
-  ])
+angular.module('proyectofinalApp', ['ngAnimate','ngAria','ngCookies','ngMessages','ngResource','ngRoute','ngSanitize','ngTouch','ngMaterial'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

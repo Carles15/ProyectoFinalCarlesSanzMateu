@@ -38,7 +38,7 @@
         <paper-item>Opción 8</paper-item>
       </core-header-panel> <!-- End // Header of the drawer -->
 
-      <core-header-panel main> <!-- Start // Header of the content -->
+      <core-header-panel id="headerPanel" main> <!-- Start // Header of the content -->
 
         <core-toolbar>
           <paper-icon-button icon ="menu" core-drawer-toggle>
@@ -65,8 +65,14 @@
           </paper-menu-button>
         </core-toolbar>
 
-        <core-list flex>
-
+        <core-list id="list" scrollTarget="{{$.headerPanel.scroller}}" runwayFactor="5">
+          <template>
+            <a>
+              <div class="row" layout horizontal center>
+                <div flex>Carles</div>
+              </div>
+            </a>
+          </template>
         </core-list>
 
       </core-header-panel> <!-- End // Header of the content -->
