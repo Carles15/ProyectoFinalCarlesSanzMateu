@@ -23,9 +23,9 @@
 
     <!-- Add your site or application content here -->
 
-    <core-drawer-panel>
+    <core-drawer-panel> <!-- Start // Global container -->
 
-      <core-header-panel drawer>
+      <core-header-panel drawer> <!-- Start // Header of the drawer -->
         <core-toolbar>Menu</core-toolbar>
 
         <paper-item>Opción 1</paper-item>
@@ -36,9 +36,9 @@
         <paper-item>Opción 6</paper-item>
         <paper-item>Opción 7</paper-item>
         <paper-item>Opción 8</paper-item>
-      </core-header-panel>
+      </core-header-panel> <!-- End // Header of the drawer -->
 
-      <core-header-panel main>
+      <core-header-panel main> <!-- Start // Header of the content -->
 
         <core-toolbar>
           <paper-icon-button icon ="menu" core-drawer-toggle>
@@ -65,11 +65,13 @@
           </paper-menu-button>
         </core-toolbar>
 
-        <div class="content"></div>
+        <core-list flex>
 
-      </core-header-panel>
+        </core-list>
 
-    </core-drawer-panel>
+      </core-header-panel> <!-- End // Header of the content -->
+
+    </core-drawer-panel> <!-- End // Global container -->
 
     
 
