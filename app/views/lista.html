@@ -1,0 +1,17 @@
+<div ng-repeat="vengador in vengadores">
+	<div>{{vengador.nombre}}</div>
+	<div ng-if="vengador.apellido">{{vengador.apellido}}</div>
+	<div ng-if="vengador.alias">{{vengador.alias}}</div>
+</div>
+
+<!-- <core-list id="list" scrollTarget="{{$.hPanel.scroller}}">
+	<template>
+	  <a>
+	    <div class="row" layout horizontal center ng-repeat="vengador in vengadores">
+	      <div flex>{{vengador.nombre}}</div>
+	    </div>
+	  </a>
+	</template>
+</core-list> -->
+
+

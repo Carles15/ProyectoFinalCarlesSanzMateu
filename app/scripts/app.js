@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular.module('proyectofinalApp', ['ngAnimate','ngAria','ngCookies','ngMessages','ngResource','ngRoute','ngSanitize','ngTouch','ngMaterial'])
+angular.module('proyectofinalApp', ['ngAnimate','ngAria','ngCookies','ngMessages','ngResource','ngRoute','ngSanitize','ngTouch'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -18,6 +18,10 @@ angular.module('proyectofinalApp', ['ngAnimate','ngAria','ngCookies','ngMessages
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/lista', {
+        templateUrl: 'views/lista.html',
+        controller: 'contactListController'
       })
       .otherwise({
         redirectTo: '/'

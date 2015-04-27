@@ -1,6 +1,6 @@
 angular.module('proyectofinalApp')
-.controller('contactListController', function('$scope'){
-	var vengadores = [{
+.controller('contactListController', function($scope){
+	$scope.vengadores = [{
 						nombre: "Carles",
 						apellido: "Sanz"
 					},
@@ -41,6 +41,4 @@ angular.module('proyectofinalApp')
 						apellido: "Parker",
 						alias: "Spiderman"
 					}];
-		
-	
 });
