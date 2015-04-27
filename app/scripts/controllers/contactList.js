@@ -40,5 +40,5 @@ angular.module('proyectofinalApp')
 						nombre: "Peter",
 						apellido: "Parker",
 						alias: "Spiderman"
-					}];
+	}];
 });

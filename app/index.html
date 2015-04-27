@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <!-- endbuild -->
   </head>
-  <body>
+  <body style="height: 800px;">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -37,7 +37,7 @@
         <paper-item>Opción 8</paper-item>
       </core-header-panel> <!-- End // Header of the drawer -->
 
-      <core-header-panel id="headerPanel" main> <!-- Start // Header of the content -->
+      <core-header-panel id="headerPanel" main ng-controller="contactListController"> <!-- Start // Header of the content -->
 
         <core-toolbar>
           <paper-icon-button icon ="menu" core-drawer-toggle>
@@ -65,11 +65,57 @@
         </core-toolbar>
 
         <core-header-panel id="hPanel">
-          <div ng-view>
-          </div>
+          <!-- <div ng-view>
+          </div> 
+
+          <core-list id="list" ng-controller="contactListController">
+            <template>
+              <div>
+                <div flex>{{model.nombre}}</div>
+              </div>
+            </template>
+          </core-list>
+
+          <ul ng-repeat="vengador in vengadores">
+            <li>{{vengador.nombre}}</li>
+          </ul>-->
+
         </core-header-panel>
 
+        <div fit style="overflow:auto;">
+
+        <core-list id="list" data="{{ vengadores }}">
+          <template>
+            <style>
+                core-list {
+                    height: 100%;
+                }
+                .item {
+                    box-sizing: border-box;
+                    height: 80px;
+                    border-bottom: 1px solid #ddd;
+                    padding: 4px;
+                    cursor: default;
+                    background-color: white;
+                    overflow: hidden;
+                }
+            </style>
+            <div fit style="overflow:auto;">
+                <core-list data="{{ apartments }}" style="height:100%;">
+                    <template>
+                        <div class="item">{{ model.text }}</div>
+                    </template>
+                </core-list>
+            </div>
+          </template>
+        </core-list>
+
+        </div>
         
+
+        <!-- <ul ng-repeat="vengador in vengadores">
+          <li>{{vengador.nombre}}</li>
+        </ul> Aquí funciona -->
 
       </core-header-panel> <!-- End // Header of the content -->
 
