@@ -1,12 +1,13 @@
 angular.module('proyectofinalApp')
 .controller('contactListController', function($scope){
-	$scope.vengadores = [{
-						nombre: "Carles",
-						apellido: "Sanz"
+	$scope.vengadores = [
+					{
+						nombre: "Tony",
+						apellido: "Stark",
+						alias: "Iron Man"
 					},
 					{
-						nombre: "Nick",
-						apellido: "Furia"
+						nombre: "Thor"
 					},
 					{
 						nombre: "Steve",
@@ -14,12 +15,9 @@ angular.module('proyectofinalApp')
 						alias: "Capitán America"
 					},
 					{
-						nombre: "Thor"
-					},
-					{
-						nombre: "Tony",
-						apellido: "Stark",
-						alias: "Iron Man"
+						nombre: "Natasha",
+						apellido: "Romanov",
+						alias: "La viuda negra"
 					},
 					{
 						nombre: "Bruce",
@@ -27,18 +25,15 @@ angular.module('proyectofinalApp')
 						alias: "Hulk"
 					},
 					{
-						nombre: "Natasha",
-						apellido: "Romanov",
-						alias: "La viuda negra"
-					},
-					{
 						nombre: "Clint",
 						apellido: "Barton",
 						alias: "Ojo de halcón"
 					},
 					{
-						nombre: "Peter",
-						apellido: "Parker",
-						alias: "Spiderman"
-	}];
+						nombre: "Nick",
+						apellido: "Furia"
+					},
+					{
+						nombre: "Argumento"
+					}];
 });
