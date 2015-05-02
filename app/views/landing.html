@@ -1,0 +1,143 @@
+<link rel="import" href="../../bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="../../bower_components/paper-dropdown/paper-dropdown.html">
+<link rel="import" href="../../bower_components/core-menu/core-menu.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="../../bower_components/core-drawer-panel/core-drawer-panel.html">
+<link rel="import" href="../../bower_components/core-list/core-list.html">
+<script src="../scripts/controllers/contactList.js"></script>
+
+<polymer-element name="landing-page" constructor="LandingPage" noscript>
+  <template>
+    
+
+
+<core-drawer-panel> <!-- Start // Global container -->
+	<core-header-panel drawer class="drawerBackground" ng-controller="contactListController"> <!-- Start // Header of the drawer -->
+	    <core-toolbar style="background-color:#3399FF">Menu</core-toolbar>
+	    <span ng-repeat="avenger in vengadores">
+	      <paper-item>{{avenger.nombre}}</paper-item>
+	    </span>
+    </core-header-panel> <!-- End // Header of the drawer -->
+
+      <core-header-panel id="headerPanel" main> <!-- Start // Header of the content -->
+
+        <core-toolbar style="background-color:#3399FF">
+          <paper-icon-button icon ="menu" core-drawer-toggle>
+          </paper-icon-button>
+
+          <div flex>All contacts</div>
+
+
+          <paper-menu-button>
+            <paper-icon-button icon="more-vert">
+            </paper-icon-button>
+
+            <paper-dropdown class="dropdown" halign="right">
+
+              <core-menu class="menu">
+
+                <paper-item>Ajustes</paper-item>
+                <paper-item>Ayuda</paper-item>
+                <paper-item>Feedback</paper-item>
+
+              </core-menu>
+
+            </paper-dropdown>
+          </paper-menu-button>
+        </core-toolbar>
+
+        <!-- Aquí empieza el grid list de materials Angular -->
+          
+
+
+
+            <div>
+              <md-grid-list md-cols-sm="1" md-cols-md="4" md-cols-gt-md="6" md-row-height="1:1" md-gutter="10px" md-gutter-gt-sm="8px" layout="row" layout-wrap>
+
+                <md-grid-tile class="ironMan" md-rowspan-md="2" md-colspan-md="2" md-rowspan-gt-md="2" md-colspan-gt-md="2" md-colspan-sm="1" style="background-color:#FF1919;">
+                  <md-grid-tile-footer>
+                    <p>1</p>
+                    <h3>#1: (2r x 2c)</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+
+                <md-grid-tile class="thor" md-rowspan-md="1" md-colspan-md="1" md-rowspan="2" md-colspan="2" md-colspan-sm="1" style="background-color:#33CC33">
+                  <md-grid-tile-footer>
+                    <p>2</p>
+                    <h3>#5: (2r x 2c)</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+
+                <md-grid-tile class="capitanAmerica" md-rowspan-md="1" md-colspan-md="1" md-rowspan-gt-md="4" md-colspan-gt-md="2" md-colspan-sm="1"style="background-color:#6699FF">
+                  <md-grid-tile-footer>
+                    <p>3</p>
+                    <h3>#1: (2r x 2c)</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+
+                <md-grid-tile class="hulk" md-rowspan-md="3" md-colspan-md="2" style="background-color:#99FF66;">
+                  <md-grid-tile-footer>
+                    <p>4</p>
+                    <h3>#2: (1r x 1c)</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+
+                <md-grid-tile class="natasha" md-rowspan-md="1" md-colspan-md="1" style="background-color:#FF6600;">
+                  <md-grid-tile-footer>
+                    <p>5</p>
+                    <h3>#3: (1r x 1c)</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+
+                <md-grid-tile class="plot" md-rowspan-md="1" md-colspan-md="1" md-rowspan-gt-md="2" md-colspan-gt-md="2" md-colspan-sm="1"style="background-color:#3333FF;">
+                  <md-grid-tile-footer>
+                    <p>6</p>
+                    <h3>#1: (2r x 2c)</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+
+                <md-grid-tile class="eyeHawk" md-rowspan-md="1" md-colspan-md="1" style="background-color:#FF6600;">
+                  <md-grid-tile-footer>
+                    <p>7</p>
+                    <h3>#3: (1r x 1c)</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+
+                <md-grid-tile class="nickFury" md-rowspan-md="1" md-colspan-md="1" style="background-color:#FF6600;">
+                  <md-grid-tile-footer>
+                    <p>8</p>
+                    <h3>#3: (1r x 1c)</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+
+              </md-grid-list>
+            </div>
+
+
+
+
+         <!-- Aquí termina el grid list de materials Angular -->
+
+            
+
+        <!-- <ul ng-repeat="vengador in vengadores">
+          <li>{{vengador.nombre}}</li>
+        </ul> Aquí funciona -->
+
+      </core-header-panel> <!-- End // Header of the content -->
+
+    </core-drawer-panel> <!-- End // Global container -->
+
+
+
+
+
+
+  </template>
+</polymer-element>
+
+
+ 
