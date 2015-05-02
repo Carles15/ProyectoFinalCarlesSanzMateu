@@ -1,5 +1,6 @@
 angular.module('proyectofinalApp')
 .controller('contactListController', function($scope){
+	alert("Hola Mundo!");
 	$scope.vengadores = [
 					{
 						nombre: "Tony",
